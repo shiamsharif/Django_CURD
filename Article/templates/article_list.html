@@ -1,0 +1,9 @@
+<h1>All Articles.</h1>
+{% for article in article_list %}
+<div>
+    <a href='{{ article.get_absolute_url }}'>
+        <h2>{{ article.title }} | {{ article.pub_date }}</h2>
+    </a>
+    <p>{{ article.content }}</p>
+</div>
+{% endfor %}
